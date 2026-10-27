@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <!-- A sasquatch footprint, toes up, drawn bold so it reads at 16px. -->
+  <rect width="64" height="64" rx="16" fill="#F6EDDA"/>
+  <g fill="#5B3A22">
+    <path d="M31 60c-8 0-12-6-11.5-13 .4-6 3.5-10 3.5-16 0-6 3.6-10.5 9.5-10.5 6.6 0 10 4.7 9.6 11-.4 5.5 1.7 10 1.5 15.5C43.3 54 38.7 60 31 60Z"/>
+    <circle cx="22.5" cy="14.5" r="5.6"/>
+    <circle cx="32.5" cy="10" r="4.4"/>
+    <circle cx="41" cy="11.5" r="3.8"/>
+    <circle cx="47.5" cy="16.5" r="3.3"/>
+    <circle cx="51" cy="23.5" r="2.9"/>
+  </g>
+</svg>

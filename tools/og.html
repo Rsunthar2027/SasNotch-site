@@ -1,0 +1,74 @@
+<!doctype html>
+<!-- Source for public/og.png (1200x630). Rendered by make-images.sh. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SasNotch OG image</title>
+<style>
+  @font-face { font-family: "Caprasimo"; src: url("/public/fonts/caprasimo-latin.woff2") format("woff2"); }
+  @font-face { font-family: "Nunito"; src: url("/public/fonts/nunito-latin.woff2") format("woff2"); font-weight: 400 800; }
+  html, body { margin: 0; width: 1200px; height: 630px; overflow: hidden; }
+  .card {
+    position: relative; width: 1200px; height: 630px; overflow: hidden;
+    background: radial-gradient(90% 60% at 50% 100%, rgba(233,162,59,.16), transparent 60%),
+      linear-gradient(#0D1C16 0%, #142C22 40%, #23402F 66%, #183026 82%);
+    font-family: "Nunito", sans-serif; color: #F6EDDA;
+  }
+  .bezel { position: absolute; inset: 0 0 auto 0; height: 14px; background: #0B0B0A; }
+  .island {
+    position: absolute; top: 14px; left: 50%; transform: translateX(-50%);
+    width: 420px; height: 112px; background: #050505; border-radius: 0 0 34px 34px;
+    display: flex; align-items: center; gap: 22px; padding: 18px 34px 10px; box-sizing: border-box;
+  }
+  .island::before, .island::after { content: ""; position: absolute; top: 0; width: 14px; height: 14px; }
+  .island::before { right: 100%; background: radial-gradient(circle at 0 100%, transparent 13.5px, #050505 14px); }
+  .island::after { left: 100%; background: radial-gradient(circle at 100% 100%, transparent 13.5px, #050505 14px); }
+  .date { display: flex; flex-direction: column; align-items: center; }
+  .date b { color: #E9A23B; font-size: 15px; letter-spacing: .12em; }
+  .date strong { font-family: "Caprasimo"; font-weight: 400; font-size: 46px; line-height: 1; }
+  .rows { border-left: 1px solid rgba(244,239,230,.15); padding-left: 20px; font-size: 18px; line-height: 1.5; }
+  .rows em { font-style: normal; font-weight: 800; color: #A9C77A; margin-right: 12px; }
+  .moon { position: absolute; top: 96px; right: 120px; width: 84px; height: 84px; border-radius: 50%;
+    background: radial-gradient(circle at 38% 36%, #FFF8E6, #F1DFB3 70%);
+    box-shadow: 0 0 44px 14px rgba(246,230,190,.24), 0 0 150px 60px rgba(246,230,190,.08); }
+  .copy { position: absolute; left: 0; right: 0; top: 178px; text-align: center; }
+  h1 { margin: 0; font-family: "Caprasimo"; font-weight: 400; font-size: 132px; line-height: 1; text-shadow: 0 6px 30px rgba(0,0,0,.4); }
+  p { margin: 18px 0 0; font-size: 36px; font-weight: 700; color: #E2D6BC; }
+  .pill { display: inline-block; margin-top: 26px; padding: 12px 28px; border-radius: 999px; background: #E9A23B;
+    border: 3px solid #3F2716; box-shadow: 0 5px 0 #3F2716; color: #2A1C12; font-size: 26px; font-weight: 800; }
+  .ridge { position: absolute; left: 0; width: 100%; object-fit: cover; object-position: 50% 100%; }
+  .r1 { bottom: 40px; height: 150px; } .r2 { bottom: 6px; height: 130px; } .r3 { bottom: -8px; height: 110px; }
+  .peek { position: absolute; right: 18px; bottom: -14px; width: 250px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="moon"></div>
+  <img class="ridge r1" src="/public/img/ridge-far.svg" alt="">
+  <img class="ridge r2" src="/public/img/ridge-mid.svg" alt="">
+  <img class="ridge r3" src="/public/img/ridge-near.svg" alt="">
+  <svg class="peek" viewBox="0 0 400 520">
+    <g transform="translate(30 0)"><g transform="translate(28 205) scale(.32)">
+      <path fill="#5B3A22" d="M110 960C115 810 160 720 250 676C290 656 318 632 338 604C332 590 328 578 322 560C340 570 352 576 362 580C316 470 346 306 492 292L506 258L530 292C678 306 708 470 662 580C672 576 684 570 702 560C696 578 692 590 686 604C706 632 734 656 774 676C864 720 909 810 914 960Z"/>
+      <path fill="#F3E7D3" d="M398 474C440 462 486 470 512 494C538 470 584 462 626 474C644 560 604 654 512 660C420 654 380 560 398 474Z"/>
+      <g fill="#5B3A22"><circle cx="462" cy="530" r="22"/><circle cx="562" cy="530" r="22"/><ellipse cx="512" cy="582" rx="40" ry="20"/></g>
+      <path d="M474 620Q512 644 550 620" fill="none" stroke="#5B3A22" stroke-width="16" stroke-linecap="round"/>
+    </g></g>
+    <path fill="#3F2716" d="M228 520V150c0-10 8-16 22-16h66c14 0 22 6 22 16v370Z"/>
+    <path fill="#1D3A2B" d="M283 0L213 70H243L183 140H218L148 215H188L108 280H458L378 215H418L348 140H383L323 70H353Z"/>
+    <path fill="#25483A" d="M283 14L226 72H250L198 140H226L166 214H200L130 276H283Z"/>
+    <path fill="#183026" d="M0 440c60-14 130-20 200-16s140 14 200 8v88H0Z"/>
+  </svg>
+  <div class="bezel"></div>
+  <div class="island">
+    <div class="date"><b>TUE</b><strong>14</strong></div>
+    <div class="rows"><div><em>9:30</em>Coffee with Mo</div><div><em>1:00</em>Team walk</div></div>
+  </div>
+  <div class="copy">
+    <h1>SasNotch</h1>
+    <p>A cozy little island for your Mac's notch</p>
+    <span class="pill">Free for Mac</span>
+  </div>
+</div>
+</body>
+</html>

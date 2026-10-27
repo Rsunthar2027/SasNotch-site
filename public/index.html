@@ -1,0 +1,363 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SasNotch: a cozy little island for your Mac's notch</title>
+  <meta name="description" content="SasNotch turns the notch on your MacBook into a small island with your calendar, music, timers and more. Free for Mac.">
+  <link rel="canonical" href="https://sasnotch.vercel.app/">
+  <meta name="theme-color" content="#13281F">
+  <meta name="color-scheme" content="light">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="SasNotch">
+  <meta property="og:title" content="SasNotch: a cozy little island for your Mac's notch">
+  <meta property="og:description" content="Your calendar, music, timers and more, tucked into the notch. Free for Mac.">
+  <meta property="og:url" content="https://sasnotch.vercel.app/">
+  <meta property="og:image" content="https://sasnotch.vercel.app/og.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="A sasquatch peeking from behind a pine tree under a MacBook notch, with the words SasNotch, a cozy little island for your Mac's notch.">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="SasNotch: a cozy little island for your Mac's notch">
+  <meta name="twitter:description" content="Your calendar, music, timers and more, tucked into the notch. Free for Mac.">
+  <meta name="twitter:image" content="https://sasnotch.vercel.app/og.png">
+  <meta name="twitter:image:alt" content="A sasquatch peeking from behind a pine tree under a MacBook notch.">
+
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preload" href="/fonts/caprasimo-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="/css/site.css">
+  <script src="/js/main.js" defer></script>
+  <script type="application/ld+json">
+  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"SasNotch","operatingSystem":"macOS 14 or later","applicationCategory":"UtilitiesApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"downloadUrl":"https://github.com/Rsunthar2027/SasNotch/releases/latest/download/SasNotch.dmg","url":"https://sasnotch.vercel.app/","license":"https://www.gnu.org/licenses/gpl-3.0.html"}
+  </script>
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <!-- Shared art. Footprint shape follows the trail on the SasNotch installer window. -->
+  <svg class="sprite" aria-hidden="true" focusable="false">
+    <symbol id="foot" viewBox="-13 -10 33 20">
+      <path d="M-12 0C-12 5 0 7 7 6.5C12 5.5 12-5.5 7-6.5C0-7-12-5-12 0Z"/>
+      <circle cx="14.5" cy="4.6" r="3.1"/><circle cx="16.2" cy=".6" r="2.4"/><circle cx="15.6" cy="-2.9" r="2.1"/><circle cx="14" cy="-5.8" r="1.9"/><circle cx="11.6" cy="-8" r="1.7"/>
+    </symbol>
+    <symbol id="foot-r" viewBox="-13 -10 33 20">
+      <g transform="scale(1 -1)"><path d="M-12 0C-12 5 0 7 7 6.5C12 5.5 12-5.5 7-6.5C0-7-12-5-12 0Z"/>
+      <circle cx="14.5" cy="4.6" r="3.1"/><circle cx="16.2" cy=".6" r="2.4"/><circle cx="15.6" cy="-2.9" r="2.1"/><circle cx="14" cy="-5.8" r="1.9"/><circle cx="11.6" cy="-8" r="1.7"/></g>
+    </symbol>
+    <symbol id="mark" viewBox="100 180 824 790">
+      <path fill-rule="evenodd" d="M110 960C115 810 160 720 250 676C290 656 318 632 338 604C332 590 328 578 322 560C340 570 352 576 362 580C316 470 346 306 492 292L506 258L530 292C678 306 708 470 662 580C672 576 684 570 702 560C696 578 692 590 686 604C706 632 734 656 774 676C864 720 909 810 914 960ZM398 474C440 462 486 470 512 494C538 470 584 462 626 474C644 560 604 654 512 660C420 654 380 560 398 474Z"/>
+      <circle cx="460" cy="534" r="30"/><circle cx="564" cy="534" r="30"/><ellipse cx="512" cy="600" rx="50" ry="26"/>
+    </symbol>
+    <symbol id="i-chip" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="16" height="16" rx="3"/><path d="M12 4v4m4-4v4m4-4v4M12 24v4m4-4v4m4-4v4M4 12h4m-4 4h4m-4 4h4M24 12h4m-4 4h4m-4 4h4"/><path d="M13 19v-6l3 4 3-4v6"/></g></symbol>
+    <symbol id="apple-dl" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m-5-5 5 5 5-5M5 20h14"/></symbol>
+    <symbol id="i-hover" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h20"/><rect x="10" y="4" width="12" height="5" rx="2.5" fill="currentColor"/><path d="M15 14l1.5 13 3.5-4.5 5.5-.5Z"/></g></symbol>
+    <symbol id="i-cal" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="7" width="22" height="20" rx="4"/><path d="M5 13h22M11 4v5m10-5v5m-9 11 3 3 6-6"/></g></symbol>
+    <symbol id="i-awake" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 13h16v7a6 6 0 0 1-6 6h-4a6 6 0 0 1-6-6Z"/><path d="M22 15h2a3 3 0 0 1 0 6h-2M11 4c-1 2 1 3 0 5m5-5c-1 2 1 3 0 5"/></g></symbol>
+    <symbol id="i-music" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 23V7l14-3v16"/><circle cx="8.5" cy="23" r="3.5"/><circle cx="22.5" cy="20" r="3.5"/></g></symbol>
+    <symbol id="i-bolt" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="10" width="22" height="12" rx="3.5"/><path d="M28 14v4M15 12l-4 5h5l-3 4"/></g></symbol>
+    <symbol id="i-focus" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 5a10 10 0 1 0 10 13A8 8 0 0 1 17 5Z"/><circle cx="25" cy="7" r="2" fill="currentColor"/></g></symbol>
+    <symbol id="i-weather" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="11" r="4"/><path d="M12 3v1.5M4 11h1.5M6.3 5.3l1 1M17.7 5.3l-1 1"/><path d="M10 26h13a5 5 0 0 0 0-10 7 7 0 0 0-13 3 3.5 3.5 0 0 0 0 7Z" fill="#FFFDF8"/></g></symbol>
+    <symbol id="i-timer" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><circle cx="16" cy="18" r="10"/><path d="M13 4h6M16 4v4M16 18l4-4M25 9l2-2"/></g></symbol>
+    <symbol id="i-shelf" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 18v6a3 3 0 0 0 3 3h18a3 3 0 0 0 3-3v-6"/><path d="M4 18h7l2 3h6l2-3h7"/><path d="M11 13V5h7l3 3v5"/></g></symbol>
+    <symbol id="i-drop" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 7l5 5M23 4.5a3.5 3.5 0 0 1 5 5l-3 3-5-5Z"/><path d="M19 10 8 21l-1 5 5-1 11-11"/></g></symbol>
+  </svg>
+
+  <header class="nav" id="top">
+    <div class="nav-inner">
+      <a class="brand" href="#top" aria-label="SasNotch, back to top">
+        <svg class="brand-mark" aria-hidden="true"><use href="#mark"/></svg>
+        <span>SasNotch</span>
+      </a>
+      <nav class="nav-links" aria-label="Sections">
+        <a href="#features">What it does</a>
+        <a href="#install">Install</a>
+        <a href="#faq">FAQ</a>
+      </nav>
+      <a class="btn btn-small mac-only" href="https://github.com/Rsunthar2027/SasNotch/releases/latest/download/SasNotch.dmg" data-download>
+        <svg class="btn-icon" aria-hidden="true"><use href="#apple-dl"/></svg><span>Download<span class="hide-sm"> for Mac</span></span>
+      </a>
+      <button class="btn btn-small btn-quiet other-only" type="button" data-copy>Copy link</button>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="laptop">
+        <div class="screen">
+          <div class="scene" aria-hidden="true">
+            <div class="moon"></div>
+            <div class="stars"></div>
+            <img class="layer layer-far" src="/img/ridge-far.svg" alt="" width="1440" height="360" data-depth="0.03">
+            <div class="mist mist-a"></div>
+            <img class="layer layer-mid" src="/img/ridge-mid.svg" alt="" width="1440" height="360" data-depth="0.06">
+            <div class="mist mist-b"></div>
+            <img class="layer layer-near" src="/img/ridge-near.svg" alt="" width="1440" height="360" data-depth="0.1">
+            <svg class="peek" viewBox="0 0 400 520" data-depth="0.13">
+              <g class="peeker">
+                <g transform="translate(28 205) scale(.32)">
+                  <path fill="#5B3A22" d="M110 960C115 810 160 720 250 676C290 656 318 632 338 604C332 590 328 578 322 560C340 570 352 576 362 580C316 470 346 306 492 292L506 258L530 292C678 306 708 470 662 580C672 576 684 570 702 560C696 578 692 590 686 604C706 632 734 656 774 676C864 720 909 810 914 960Z"/>
+                  <path fill="#F3E7D3" d="M398 474C440 462 486 470 512 494C538 470 584 462 626 474C644 560 604 654 512 660C420 654 380 560 398 474Z"/>
+                  <g fill="#5B3A22"><circle class="eye" cx="462" cy="530" r="22"/><circle class="eye" cx="562" cy="530" r="22"/><ellipse cx="512" cy="582" rx="40" ry="20"/></g>
+                  <path d="M474 620Q512 644 550 620" fill="none" stroke="#5B3A22" stroke-width="16" stroke-linecap="round"/>
+                </g>
+              </g>
+              <path fill="#3F2716" d="M228 520V150c0-10 8-16 22-16h66c14 0 22 6 22 16v370c-12-8-24-10-36-4-14-8-30-8-42 0-12-6-22-4-32 4Z"/>
+              <path fill="none" stroke="#2C1A0E" stroke-width="4" stroke-linecap="round" d="M252 190v80m26-40v120m26-160v60m-38 140v60m46-30v40"/>
+              <path fill="#1D3A2B" d="M283 0L213 70H243L183 140H218L148 215H188L108 280H458L378 215H418L348 140H383L323 70H353Z"/>
+              <path fill="#25483A" d="M283 14L226 72H250L198 140H226L166 214H200L130 276H283Z"/>
+              <path fill="#183026" d="M0 440c60-14 130-20 200-16s140 14 200 8v88H0Z"/>
+              <g fill="none" stroke="#56713A" stroke-width="4" stroke-linecap="round">
+                <path d="M40 470c10-40 30-66 60-80m-48 54c-6-8-8-18-6-28m16 14c-6-10-6-20-2-30m16 16c-4-10-2-20 4-28m14 18c-2-10 2-18 8-24"/>
+                <path d="M330 480c-6-36-24-62-52-76m46 58c6-8 10-18 8-28m-18 12c6-10 6-20 2-30m-16 14c4-10 2-20-4-28"/>
+              </g>
+            </svg>
+          </div>
+
+          <div class="notch-wrap">
+            <button class="island" id="island" type="button" aria-expanded="false" aria-describedby="island-hint">
+              <span class="sr-only">Preview the SasNotch island</span>
+              <span class="island-compact" aria-hidden="true">
+                <span class="cmp-art"></span>
+                <span class="bars"><i></i><i></i><i></i><i></i></span>
+              </span>
+              <span class="island-body" aria-hidden="true">
+                <span class="pane pane-cal is-active" data-pane="Calendar">
+                  <span class="cal-date"><b>Tue</b><strong>14</strong></span>
+                  <span class="cal-list">
+                    <span class="cal-row"><em>9:30</em>Coffee with Mo</span>
+                    <span class="cal-row"><em>1:00</em>Team walk</span>
+                    <span class="cal-row cal-todo"><i></i>Water the ferns</span>
+                  </span>
+                </span>
+                <span class="pane pane-music" data-pane="Music">
+                  <span class="art"><span class="art-moon"></span></span>
+                  <span class="track">
+                    <b>Campfire Songs</b>
+                    <span>The Night Ferns</span>
+                    <span class="progress"><i></i></span>
+                    <span class="controls">
+                      <svg viewBox="0 0 24 24"><path d="M6 5v14M19 5 9 12l10 7Z"/></svg>
+                      <svg viewBox="0 0 24 24"><path d="M8 5v14M16 5v14"/></svg>
+                      <svg viewBox="0 0 24 24"><path d="M18 5v14M5 5l10 7-10 7Z"/></svg>
+                    </span>
+                  </span>
+                  <span class="bars bars-big"><i></i><i></i><i></i><i></i><i></i></span>
+                </span>
+                <span class="pane pane-timer" data-pane="Timer">
+                  <svg class="ring" viewBox="0 0 44 44"><circle cx="22" cy="22" r="18"/><circle class="ring-fill" cx="22" cy="22" r="18"/></svg>
+                  <span class="timer-text"><b>Tea</b><strong class="timer-count">3:42</strong></span>
+                  <span class="pill">Keep Awake · 1h left</span>
+                </span>
+                <span class="dots"><i class="is-active"></i><i></i><i></i></span>
+              </span>
+            </button>
+            <p class="sr-only" id="island-hint">A demo of what SasNotch shows in your notch: calendar, music and a timer.</p>
+          </div>
+
+          <div class="hero-copy">
+            <h1 id="hero-title">The notch, <span class="nowrap">but cozy.</span></h1>
+            <p class="lede">SasNotch turns the black notch at the top of your MacBook screen into a little island. Point at it to see your day, your music and your timers.</p>
+            <div class="get" data-get>
+              <a class="btn btn-big mac-only" href="https://github.com/Rsunthar2027/SasNotch/releases/latest/download/SasNotch.dmg" data-download>
+                <svg class="btn-icon" aria-hidden="true"><use href="#apple-dl"/></svg>Download for Mac
+              </a>
+              <p class="fine mac-only">Free · macOS 14+ · Apple Silicon</p>
+              <div class="not-mac other-only" role="note">
+                <p class="not-mac-title">SasNotch is for Mac.</p>
+                <p>You're on <span data-device>another device</span> right now. Send yourself the link and open it on your Mac.</p>
+                <div class="not-mac-actions">
+                  <button class="btn btn-big" type="button" data-copy>Copy link</button>
+                  <a class="btn btn-big btn-ghost" data-email href="mailto:?subject=SasNotch%20for%20my%20Mac&amp;body=Download%20SasNotch%20on%20my%20Mac%3A%20https%3A%2F%2Fsasnotch.vercel.app%2F">Email me the link</a>
+                </div>
+                <p class="fine"><a href="https://github.com/Rsunthar2027/SasNotch/releases/latest/download/SasNotch.dmg">On a Mac after all? Download anyway</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="base" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <div class="trail" aria-hidden="true">
+      <svg viewBox="0 0 600 60"><use href="#foot" x="20" y="28" width="38" height="23" class="f1"/><use href="#foot-r" x="120" y="8" width="38" height="23" class="f2"/><use href="#foot" x="220" y="28" width="38" height="23" class="f3"/><use href="#foot-r" x="320" y="8" width="38" height="23" class="f4"/><use href="#foot" x="420" y="28" width="38" height="23" class="f5"/><use href="#foot-r" x="520" y="8" width="38" height="23" class="f6"/></svg>
+    </div>
+
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="wrap">
+        <h2 id="features-title">What it does</h2>
+        <p class="section-lede">It stays tucked into the notch until you need it. Sasquatches are good at that.</p>
+        <ul class="cards" role="list">
+          <li class="card"><svg class="card-icon" aria-hidden="true"><use href="#i-hover"/></svg><h3>Hover to open</h3><p>Point at the notch and the island opens. Click inside and it stays open until you're done.</p></li>
+          <li class="card"><svg class="card-icon" aria-hidden="true"><use href="#i-cal"/></svg><h3>Calendar and reminders</h3><p>Today's events at a glance. Reminders due today sit just below, and you can tick them off right there.</p></li>
+          <li class="card"><svg class="card-icon" aria-hidden="true"><use href="#i-awake"/></svg><h3>Keep Awake</h3><p>Stop your Mac from dozing off, for anything from 15 minutes to 8 hours, or until you turn it off.</p></li>
+          <li class="card"><svg class="card-icon" aria-hidden="true"><use href="#i-music"/></svg><h3>Music visualizer</h3><p>See what's playing and control it. Little bars bounce along with the song.</p></li>
+          <li class="card"><svg class="card-icon" aria-hidden="true"><use href="#i-bolt"/></svg><h3>Charging and Bluetooth pop-ups</h3><p>Plug in your charger or connect your headphones, and a small pop-up shows the battery level.</p></li>
+          <li class="card"><svg class="card-icon" aria-hidden="true"><use href="#i-focus"/></svg><h3>Focus, camera and mic notices</h3><p>A quick heads-up when Focus turns on or off, or when an app starts using your camera or microphone.</p></li>
+          <li class="card"><svg class="card-icon" aria-hidden="true"><use href="#i-weather"/></svg><h3>Lock screen weather</h3><p>Check the weather before you even unlock. While your Mac charges, the lock screen shows the battery too.</p></li>
+          <li class="card"><svg class="card-icon" aria-hidden="true"><use href="#i-timer"/></svg><h3>Timers</h3><p>Start a timer from the notch and keep an eye on it while you work.</p></li>
+          <li class="card"><svg class="card-icon" aria-hidden="true"><use href="#i-shelf"/></svg><h3>Shelf</h3><p>Drop files on the notch to park them for a bit. Drag them back out when you need them.</p></li>
+          <li class="card"><svg class="card-icon" aria-hidden="true"><use href="#i-drop"/></svg><h3>Color picker</h3><p>Pick any color on your screen and copy its code.</p></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="section section-install" id="install" aria-labelledby="install-title">
+      <div class="wrap">
+        <h2 id="install-title">How to install</h2>
+        <p class="section-lede">Three steps. It takes about a minute.</p>
+        <ol class="steps" role="list">
+          <li class="step">
+            <span class="step-num" aria-hidden="true">1</span>
+            <svg class="step-art" viewBox="0 0 260 150" role="img" aria-label="The SasNotch download in a Downloads folder">
+              <rect x="10" y="10" width="240" height="130" rx="16" fill="#FFFDF8" stroke="#D9C7A4"/>
+              <path d="M10 26a16 16 0 0 1 16-16h208a16 16 0 0 1 16 16v6H10Z" fill="#F4ECDD"/>
+              <circle cx="28" cy="22" r="4" fill="#E07A5F"/><circle cx="41" cy="22" r="4" fill="#E9A23B"/><circle cx="54" cy="22" r="4" fill="#8DAE5C"/>
+              <text x="130" y="26" text-anchor="middle" class="art-label">Downloads</text>
+              <rect x="98" y="48" width="64" height="58" rx="10" fill="#EFE2C6" stroke="#5B3A22" stroke-width="2.5"/>
+              <use href="#mark" x="112" y="56" width="36" height="34" fill="#5B3A22"/>
+              <text x="130" y="124" text-anchor="middle" class="art-label art-strong">SasNotch.dmg</text>
+              <path d="M170 92l3 20 5-6 8 1Z" fill="#2A1C12" stroke="#FFFDF8" stroke-width="1.5" stroke-linejoin="round"/>
+            </svg>
+            <h3>Open the download</h3>
+            <p>Find <b>SasNotch.dmg</b> in your Downloads folder and double-click it.</p>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">2</span>
+            <svg class="step-art" viewBox="0 0 260 150" role="img" aria-label="Dragging SasNotch along a footprint trail into the Applications folder">
+              <rect x="10" y="10" width="240" height="130" rx="16" fill="#1C3B2E"/>
+              <path d="M10 112c40-10 80-14 120-10s80 12 120 6v16a16 16 0 0 1-16 16H26a16 16 0 0 1-16-16Z" fill="#13281F"/>
+              <rect x="30" y="46" width="56" height="56" rx="13" fill="#F3E7D3"/>
+              <use href="#mark" x="36" y="52" width="44" height="44" fill="#5B3A22"/>
+              <g fill="#C9B48E"><use href="#foot" x="94" y="72" width="25" height="15"/><use href="#foot-r" x="120" y="58" width="25" height="15"/><use href="#foot" x="146" y="72" width="25" height="15"/></g>
+              <path d="M174 68l8 8-8 8" fill="none" stroke="#E9A23B" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M190 54h18l5 5h23v42h-46Z" fill="#8DAE5C"/><path d="M190 64h46v37h-46Z" fill="#A9C77A"/>
+              <text x="213" y="120" text-anchor="middle" class="art-label art-light">Applications</text>
+              <text x="58" y="120" text-anchor="middle" class="art-label art-light">SasNotch</text>
+            </svg>
+            <h3>Drag SasNotch to Applications</h3>
+            <p>A window opens with a trail of footprints. Drag the sasquatch along it into the Applications folder.</p>
+          </li>
+          <li class="step">
+            <span class="step-num" aria-hidden="true">3</span>
+            <svg class="step-art" viewBox="0 0 260 150" role="img" aria-label="The SasNotch welcome window with an Allow button next to each permission">
+              <rect x="10" y="10" width="240" height="130" rx="16" fill="#FFFDF8" stroke="#D9C7A4"/>
+              <use href="#mark" x="22" y="20" width="24" height="23" fill="#5B3A22"/>
+              <text x="52" y="36" class="art-label art-strong">Welcome to SasNotch</text>
+              <g class="art-label"><text x="26" y="66">Calendar</text><text x="26" y="94">Music</text><text x="26" y="122">Notifications</text></g>
+              <g fill="#E4D6BA"><rect x="20" y="76" width="220" height="1"/><rect x="20" y="104" width="220" height="1"/></g>
+              <g><rect x="178" y="53" width="56" height="20" rx="10" fill="#E9A23B"/><rect x="178" y="81" width="56" height="20" rx="10" fill="#E9A23B"/><rect x="178" y="109" width="56" height="20" rx="10" fill="#E9A23B"/></g>
+              <g class="art-label art-strong" text-anchor="middle"><text x="206" y="67">Allow</text><text x="206" y="95">Allow</text><text x="206" y="123">Allow</text></g>
+            </svg>
+            <h3>Open it and click Allow</h3>
+            <p>Open SasNotch from Applications. A welcome window lists a few permissions. Click <b>Allow</b> next to each one, and you're set.</p>
+          </li>
+        </ol>
+        <div class="install-cta">
+          <a class="btn btn-big mac-only" href="https://github.com/Rsunthar2027/SasNotch/releases/latest/download/SasNotch.dmg" data-download>
+            <svg class="btn-icon" aria-hidden="true"><use href="#apple-dl"/></svg>Download for Mac
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="help" aria-labelledby="help-title">
+      <div class="wrap">
+        <div class="helpbox">
+          <h2 id="help-title">Mac says it can't verify the app?</h2>
+          <p class="section-lede">That's normal the first time. Apple charges developers a yearly fee to pre-check their apps, and SasNotch is a free project that skips it. You only need to tell your Mac it's okay once.</p>
+          <ol class="help-steps" role="list">
+            <li>
+              <img src="/img/help-1.svg" width="320" height="200" loading="lazy" alt="The warning that the Mac can't verify SasNotch, with the Done button highlighted.">
+              <p><span class="mini-num">1</span><span>Open SasNotch once. When the warning appears, click <b>Done</b>.</span></p>
+            </li>
+            <li>
+              <img src="/img/help-2.svg" width="320" height="200" loading="lazy" alt="System Settings with Privacy and Security selected in the sidebar.">
+              <p><span class="mini-num">2</span><span>Open <b>System Settings</b>, click <b>Privacy &amp; Security</b>, then scroll down.</span></p>
+            </li>
+            <li>
+              <img src="/img/help-3.svg" width="320" height="200" loading="lazy" alt="A note saying SasNotch was blocked, with an Open Anyway button next to it.">
+              <p><span class="mini-num">3</span><span>Click <b>Open Anyway</b> next to SasNotch, then confirm. Your Mac may ask for your password.</span></p>
+            </li>
+          </ol>
+        </div>
+
+        <aside class="checkmac" aria-labelledby="checkmac-title">
+          <svg class="checkmac-icon" aria-hidden="true"><use href="#i-chip"/></svg>
+          <div>
+            <h3 id="checkmac-title">Check your Mac</h3>
+            <p>Click the Apple menu in the top-left corner and choose <b>About This Mac</b>. Next to Chip, it should say <b>Apple M1</b> or newer. SasNotch also needs macOS 14 Sonoma or later.</p>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section" id="faq" aria-labelledby="faq-title">
+      <div class="wrap wrap-narrow">
+        <h2 id="faq-title">Questions</h2>
+        <div class="faq">
+          <details>
+            <summary>Is it free?</summary>
+            <p>Yes. There's no trial, no ads and no account. SasNotch is free and open source.</p>
+          </details>
+          <details>
+            <summary>Is it safe?</summary>
+            <p>The code is public on <a href="https://github.com/Rsunthar2027/SasNotch">GitHub</a>, so anyone can read exactly what SasNotch does. Every update is signed, and SasNotch checks that signature before it installs anything.</p>
+          </details>
+          <details>
+            <summary>How do I update it?</summary>
+            <p>You don't have to do anything. SasNotch checks for a new version once a day and asks before it installs one. You can also click its menu bar icon and choose <b>Check for Updates</b>.</p>
+          </details>
+          <details>
+            <summary>How do I uninstall it?</summary>
+            <p>Click the SasNotch icon in the menu bar and choose <b>Quit</b>. Then drag SasNotch from your Applications folder to the Trash.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section class="cta" aria-labelledby="cta-title">
+      <div class="cta-sky" aria-hidden="true"><div class="moon moon-small"></div></div>
+      <div class="cta-inner">
+        <h2 id="cta-title">Give your notch something to do.</h2>
+        <div class="get" data-get>
+          <a class="btn btn-big mac-only" href="https://github.com/Rsunthar2027/SasNotch/releases/latest/download/SasNotch.dmg" data-download>
+            <svg class="btn-icon" aria-hidden="true"><use href="#apple-dl"/></svg>Download for Mac
+          </a>
+          <p class="fine mac-only">Free · macOS 14+ · Apple Silicon</p>
+          <div class="not-mac other-only" role="note">
+            <p class="not-mac-title">SasNotch is for Mac.</p>
+            <p>Send yourself the link and open it on your Mac.</p>
+            <div class="not-mac-actions">
+              <button class="btn btn-big" type="button" data-copy>Copy link</button>
+              <a class="btn btn-big btn-ghost" data-email href="mailto:?subject=SasNotch%20for%20my%20Mac&amp;body=Download%20SasNotch%20on%20my%20Mac%3A%20https%3A%2F%2Fsasnotch.vercel.app%2F">Email me the link</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <img class="cta-ridge cta-ridge-back" src="/img/ridge-cta-back.svg" alt="" width="1440" height="200" loading="lazy">
+      <img class="cta-ridge" src="/img/ridge-cta.svg" alt="" width="1440" height="200" loading="lazy">
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap footer-inner">
+      <div class="footer-brand">
+        <svg class="brand-mark" aria-hidden="true"><use href="#mark"/></svg>
+        <span>SasNotch</span>
+      </div>
+      <ul class="footer-links" role="list">
+        <li><a href="https://github.com/Rsunthar2027/SasNotch">Source code on GitHub</a></li>
+        <li><a href="https://github.com/Rsunthar2027/SasNotch/blob/main/LICENSE">License: GPL-3.0</a></li>
+        <li><a href="https://github.com/Rsunthar2027/SasNotch/issues/new/choose">Report a problem</a></li>
+      </ul>
+      <p class="credits">Built on <a href="https://github.com/vorssaint/vorssaint-utils">Vorssaint</a> and <a href="https://github.com/Ebullioscopic/Atoll">Atoll</a> (which builds on <a href="https://github.com/TheBoredTeam/boring.notch">Boring.Notch</a>).</p>
+      <p class="legal">SasNotch isn't affiliated with Apple. Mac and macOS are trademarks of Apple Inc.</p>
+    </div>
+  </footer>
+  <p class="toast" role="status" aria-live="polite" data-toast></p>
+</body>
+</html>

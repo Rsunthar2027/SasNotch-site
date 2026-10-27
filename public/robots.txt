@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://sasnotch.vercel.app/sitemap.xml

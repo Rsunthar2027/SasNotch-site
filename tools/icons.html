@@ -1,0 +1,27 @@
+<!doctype html>
+<!-- Source for the PNG icons. ?icon=touch renders the app icon full-bleed, ?icon=foot the footprint favicon. -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>SasNotch icons</title>
+<style>
+  html, body { margin: 0; width: 512px; height: 512px; overflow: hidden; background: transparent; }
+  svg { display: block; width: 512px; height: 512px; }
+  .foot, .touch { display: none; }
+  .show { display: block; }
+</style>
+</head>
+<body>
+<svg class="touch" viewBox="100 100 824 824">
+  <rect x="100" y="100" width="824" height="824" fill="#F3E7D3"/>
+  <path fill="#5B3A22" d="M110 960C115 810 160 720 250 676C290 656 318 632 338 604C332 590 328 578 322 560C340 570 352 576 362 580C316 470 346 306 492 292L506 258L530 292C678 306 708 470 662 580C672 576 684 570 702 560C696 578 692 590 686 604C706 632 734 656 774 676C864 720 909 810 914 960Z"/>
+  <path fill="#F3E7D3" d="M398 474C440 462 486 470 512 494C538 470 584 462 626 474C644 560 604 654 512 660C420 654 380 560 398 474Z"/>
+  <g fill="#5B3A22"><circle cx="462" cy="530" r="22"/><circle cx="562" cy="530" r="22"/><ellipse cx="512" cy="582" rx="40" ry="20"/></g>
+  <path d="M474 620Q512 644 550 620" fill="none" stroke="#5B3A22" stroke-width="16" stroke-linecap="round"/>
+</svg>
+<img class="foot" src="/public/favicon.svg" width="512" height="512" alt="">
+<script>
+  document.querySelector("." + (new URLSearchParams(location.search).get("icon") || "touch")).classList.add("show");
+</script>
+</body>
+</html>
