@@ -32,7 +32,12 @@
   <link rel="stylesheet" href="/css/site.css">
   <script src="/js/main.js" defer></script>
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"SoftwareApplication","name":"SasNotch","operatingSystem":"macOS 14 or later","applicationCategory":"UtilitiesApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"downloadUrl":"https://github.com/Rsunthar2027/SasNotch/releases/latest/download/SasNotch.dmg","url":"https://sasnotch.vercel.app/","license":"https://www.gnu.org/licenses/gpl-3.0.html"}
+  {"@context":"https://schema.org","@graph":[
+    {"@type":"SoftwareApplication","name":"SasNotch","operatingSystem":"macOS 14 or later","applicationCategory":"UtilitiesApplication","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},"downloadUrl":"https://github.com/Rsunthar2027/SasNotch/releases/latest/download/SasNotch.dmg","url":"https://sasnotch.vercel.app/","license":"https://www.gnu.org/licenses/gpl-3.0.html"},
+    {"@type":"VideoObject","name":"SasNotch in 50 seconds","description":"A short tour of SasNotch, the free notch app for Mac: your day at a glance, heads-ups when things happen, and 76 tools you can switch on or off.","thumbnailUrl":"https://sasnotch.vercel.app/videos/promo.jpg","uploadDate":"2026-10-27","duration":"PT50S","contentUrl":"https://sasnotch.vercel.app/videos/promo.mp4"},
+    {"@type":"VideoObject","name":"Install SasNotch in 45 seconds","description":"How to install SasNotch on a Mac: download it, drag it into Applications, get past the first-launch warning with Open Anyway, and click Allow.","thumbnailUrl":"https://sasnotch.vercel.app/videos/install.jpg","uploadDate":"2026-10-27","duration":"PT45S","contentUrl":"https://sasnotch.vercel.app/videos/install.mp4"},
+    {"@type":"VideoObject","name":"Getting around SasNotch in 1 minute","description":"How to use SasNotch: the island in the notch, the menu bar sasquatch, and Settings.","thumbnailUrl":"https://sasnotch.vercel.app/videos/getting-around.jpg","uploadDate":"2026-10-27","duration":"PT1M","contentUrl":"https://sasnotch.vercel.app/videos/getting-around.mp4"}
+  ]}
   </script>
 </head>
 <body>
@@ -53,6 +58,9 @@
       <circle cx="460" cy="534" r="30"/><circle cx="564" cy="534" r="30"/><ellipse cx="512" cy="600" rx="50" ry="26"/>
     </symbol>
     <symbol id="i-chip" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="8" y="8" width="16" height="16" rx="3"/><path d="M12 4v4m4-4v4m4-4v4M12 24v4m4-4v4m4-4v4M4 12h4m-4 4h4m-4 4h4M24 12h4m-4 4h4m-4 4h4"/><path d="M13 19v-6l3 4 3-4v6"/></g></symbol>
+    <symbol id="i-play" viewBox="0 0 24 24"><path fill="currentColor" d="M8 5.5v13a1 1 0 0 0 1.5.86l10.6-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5Z"/></symbol>
+    <symbol id="i-menu" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" d="M4 7h16M4 12h16M4 17h16"/></symbol>
+    <symbol id="i-close" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" d="M6 6l12 12M18 6 6 18"/></symbol>
     <symbol id="apple-dl" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m-5-5 5 5 5-5M5 20h14"/></symbol>
     <symbol id="i-hover" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4h20"/><rect x="10" y="4" width="12" height="5" rx="2.5" fill="currentColor"/><path d="M15 14l1.5 13 3.5-4.5 5.5-.5Z"/></g></symbol>
     <symbol id="i-cal" viewBox="0 0 32 32"><g fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="7" width="22" height="20" rx="4"/><path d="M5 13h22M11 4v5m10-5v5m-9 11 3 3 6-6"/></g></symbol>
@@ -72,15 +80,20 @@
         <svg class="brand-mark" aria-hidden="true"><use href="#mark"/></svg>
         <span>SasNotch</span>
       </a>
-      <nav class="nav-links" aria-label="Sections">
+      <nav class="nav-links" id="nav-links" aria-label="Sections">
         <a href="#features">What it does</a>
+        <a href="#videos">Videos</a>
         <a href="#install">Install</a>
+        <a href="#learn">Learn</a>
         <a href="#faq">FAQ</a>
       </nav>
       <a class="btn btn-small mac-only" href="https://github.com/Rsunthar2027/SasNotch/releases/latest/download/SasNotch.dmg" data-download>
         <svg class="btn-icon" aria-hidden="true"><use href="#apple-dl"/></svg><span>Download<span class="hide-sm"> for Mac</span></span>
       </a>
       <button class="btn btn-small btn-quiet other-only" type="button" data-copy>Copy link</button>
+      <button class="menu-btn" type="button" aria-expanded="false" aria-controls="nav-links" data-menu>
+        <svg aria-hidden="true"><use href="#i-menu"/></svg><span class="sr-only">Menu</span>
+      </button>
     </div>
   </header>
 
@@ -176,9 +189,28 @@
                 <p class="fine"><a href="https://github.com/Rsunthar2027/SasNotch/releases/latest/download/SasNotch.dmg">On a Mac after all? Download anyway</a></p>
               </div>
             </div>
+            <button class="btn btn-ghost btn-tour" type="button" data-tour aria-haspopup="dialog">
+              <svg class="btn-icon" aria-hidden="true"><use href="#i-play"/></svg>Watch the 50s tour
+            </button>
           </div>
         </div>
         <div class="base" aria-hidden="true"></div>
+      </div>
+    </section>
+
+    <section class="section section-videos" id="videos" aria-labelledby="videos-title">
+      <div class="wrap">
+        <h2 id="videos-title">See it in action</h2>
+        <p class="section-lede">Fifty seconds of SasNotch at work. It has music, but no talking.</p>
+        <div class="video-frame video-frame-big">
+          <video id="promo-video" controls playsinline preload="none" data-poster="/videos/promo.jpg" width="1920" height="1080" aria-label="SasNotch tour, 50 seconds, music only" aria-describedby="promo-notes">
+            <source src="/videos/promo.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="video-notes" id="promo-notes">
+          <h3>In this video</h3>
+          <p>It asks which notch app you'd bring along, then shows SasNotch at work: today's events and reminders in the notch, heads-ups for charging, headphones and Focus, and window switching and snapping. It has 76 tools in all, and you turn on only the ones you want. It ends with the free download.</p>
+        </div>
       </div>
     </section>
 
@@ -208,7 +240,27 @@
     <section class="section section-install" id="install" aria-labelledby="install-title">
       <div class="wrap">
         <h2 id="install-title">How to install</h2>
-        <p class="section-lede">Three steps. It takes about a minute.</p>
+        <p class="section-lede">It takes about a minute. Watch it once, or follow the steps below.</p>
+        <div class="video-block">
+          <h3 class="video-title">Watch: install in 45 seconds</h3>
+          <div class="video-frame">
+            <video id="install-video" controls playsinline preload="none" data-poster="/videos/install.jpg" width="1920" height="1080" aria-label="How to install SasNotch, 45 seconds, music only" aria-describedby="install-notes">
+              <source src="/videos/install.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="chapters" role="group" aria-label="Jump to a step in the install video">
+            <button class="chapter" type="button" data-video="install" data-t="4"><time>0:04</time> Download</button>
+            <button class="chapter" type="button" data-video="install" data-t="9"><time>0:09</time> Drag into Applications</button>
+            <button class="chapter" type="button" data-video="install" data-t="17"><time>0:17</time> The warning (click Done)</button>
+            <button class="chapter" type="button" data-video="install" data-t="23"><time>0:23</time> Open Anyway</button>
+            <button class="chapter" type="button" data-video="install" data-t="35"><time>0:35</time> Click Allow</button>
+          </div>
+          <div class="video-notes" id="install-notes">
+            <h3>In this video</h3>
+            <p>Five steps, shown on a Mac screen. Download SasNotch from this site. Drag it into the Applications folder. When your Mac warns you, click Done. Open System Settings, go to Privacy &amp; Security and click Open Anyway. Then click Allow for each permission you want on the welcome screen.</p>
+          </div>
+        </div>
+        <h3 class="steps-title">Prefer reading? Same thing, in three steps.</h3>
         <ol class="steps" role="list">
           <li class="step">
             <span class="step-num" aria-hidden="true">1</span>
@@ -269,6 +321,7 @@
         <div class="helpbox">
           <h2 id="help-title">Mac says it can't verify the app?</h2>
           <p class="section-lede">That's normal the first time. Apple charges developers a yearly fee to pre-check their apps, and SasNotch is a free project that skips it. You only need to tell your Mac it's okay once.</p>
+          <p class="help-watch"><a class="btn btn-big" href="#install-0:17" data-jump><svg class="btn-icon" aria-hidden="true"><use href="#i-play"/></svg>Watch this step (0:17)</a></p>
           <ol class="help-steps" role="list">
             <li>
               <img src="/img/help-1.svg" width="320" height="200" loading="lazy" alt="The warning that the Mac can't verify SasNotch, with the Done button highlighted.">
@@ -295,6 +348,34 @@
       </div>
     </section>
 
+    <section class="section section-learn" id="learn" aria-labelledby="learn-title">
+      <div class="wrap">
+        <h2 id="learn-title">Learn SasNotch in 1 minute</h2>
+        <p class="section-lede">There are three places to know: the island, the menu bar and Settings.</p>
+        <div class="video-block">
+          <div class="video-frame">
+            <video id="learn-video" controls playsinline preload="none" data-poster="/videos/getting-around.jpg" width="1920" height="1080" aria-label="Getting around SasNotch, 1 minute, music only" aria-describedby="learn-notes">
+              <source src="/videos/getting-around.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="chapters" role="group" aria-label="Jump to a part of the getting-around video">
+            <button class="chapter" type="button" data-video="learn" data-t="3"><time>0:03</time> The island</button>
+            <button class="chapter" type="button" data-video="learn" data-t="20"><time>0:20</time> Menu bar</button>
+            <button class="chapter" type="button" data-video="learn" data-t="29"><time>0:29</time> Settings</button>
+          </div>
+          <div class="video-notes" id="learn-notes">
+            <h3>In this video</h3>
+            <p>Point at the notch and the island opens, with your calendar, music and timers in sections you can switch between. Right-click the sasquatch in the menu bar for quick controls. In Settings, search for any option, pick which features to use, and tune each tool on its own page, including the size and layout of the island itself.</p>
+          </div>
+        </div>
+        <ol class="tips" role="list">
+          <li class="tip"><span class="tip-num" aria-hidden="true">1</span><h3>Point at the notch</h3><p>The island opens on its own. Move away and it tucks itself back in.</p></li>
+          <li class="tip"><span class="tip-num" aria-hidden="true">2</span><h3>Right-click the menu bar sasquatch</h3><p>Settings, Keep Awake, Pause Island, updates and Quit are all there.</p></li>
+          <li class="tip"><span class="tip-num" aria-hidden="true">3</span><h3>Settings › Features</h3><p>Turn tools on or off. Anything you switch off stops loading.</p></li>
+        </ol>
+      </div>
+    </section>
+
     <section class="section" id="faq" aria-labelledby="faq-title">
       <div class="wrap wrap-narrow">
         <h2 id="faq-title">Questions</h2>
@@ -302,6 +383,10 @@
           <details>
             <summary>Is it free?</summary>
             <p>Yes. There's no trial, no ads and no account. SasNotch is free and open source.</p>
+          </details>
+          <details>
+            <summary>How do I use it?</summary>
+            <p>Point at the notch to open the island. Right-click the sasquatch in the menu bar for quick controls, and use Settings › Features to pick your tools. The <a href="#learn-0:03" data-jump>1-minute guide</a> shows all three.</p>
           </details>
           <details>
             <summary>Is it safe?</summary>
@@ -316,6 +401,7 @@
             <p>Click the SasNotch icon in the menu bar and choose <b>Quit</b>. Then drag SasNotch from your Applications folder to the Trash.</p>
           </details>
         </div>
+        <p class="faq-more">Stuck installing? <a href="#install-0:04" data-jump>Watch the 45-second install video</a>.</p>
       </div>
     </section>
 
@@ -358,6 +444,18 @@
       <p class="legal">SasNotch isn't affiliated with Apple. Mac and macOS are trademarks of Apple Inc.</p>
     </div>
   </footer>
-  <p class="toast" role="status" aria-live="polite" data-toast></p>
+  <dialog class="modal" id="tour-modal" aria-labelledby="tour-title">
+    <div class="modal-head">
+      <h2 id="tour-title">SasNotch in 50 seconds</h2>
+      <button class="modal-close" type="button" data-close><svg aria-hidden="true"><use href="#i-close"/></svg><span class="sr-only">Close video</span></button>
+    </div>
+    <div class="video-frame">
+      <video id="tour-video" controls playsinline preload="none" data-poster="/videos/promo.jpg" width="1920" height="1080" aria-label="SasNotch tour, 50 seconds, music only" aria-describedby="tour-notes">
+        <source src="/videos/promo.mp4" type="video/mp4">
+      </video>
+    </div>
+    <p class="modal-notes" id="tour-notes">In this video: today's events and reminders in the notch, heads-ups for charging, headphones and Focus, window tools, and the 76 features you can switch on or off. Music only, no talking.</p>
+  </dialog>
+  <div class="toast" role="status" aria-live="polite" data-toast><span data-toast-text></span> <a href="#install-0:00" data-jump data-toast-link hidden>Watch the 45s guide</a></div>
 </body>
 </html>
