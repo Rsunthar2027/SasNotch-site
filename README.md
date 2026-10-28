@@ -2,7 +2,7 @@
 
 The one-page site for [SasNotch](https://github.com/Rsunthar2027/SasNotch), live at https://sasnotch.vercel.app.
 
-Plain HTML, CSS and JavaScript. No framework, no build step, no tracking, no cookies.
+Plain HTML, CSS and JavaScript. No framework, no build step, no cookies. Visits are counted with [Vercel Web Analytics](https://vercel.com/docs/analytics), which is cookie-free and doesn't store personal data. The numbers are in the Vercel dashboard under the project's Analytics tab.
 
 ## Editing
 

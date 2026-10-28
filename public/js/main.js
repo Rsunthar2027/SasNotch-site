@@ -1,5 +1,5 @@
 // SasNotch site: device check, copy/email link, menu, videos, the island demo, gentle parallax.
-// No tracking, no cookies, no storage.
+// No cookies, no storage. Page views are counted by Vercel Web Analytics (see index.html).
 (function () {
   "use strict";
 
