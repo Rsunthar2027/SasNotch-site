@@ -213,6 +213,10 @@ html.is-other .mac-only { display: none; }
   .nav-links a:last-child { border-bottom: 0; }
   .nav.is-open .nav-links { display: flex; }
 }
+/* A sixth link only fits from 1100px (fallback fonts are wider); below 961px it is in the menu. */
+@media (min-width: 961px) and (max-width: 1099px) {
+  .nav-links .nav-wide { display: none; }
+}
 @media (max-width: 420px) {
   .hide-sm { display: none; }
   .brand { font-size: 1.3rem; gap: 8px; }
@@ -929,6 +933,24 @@ html.is-other .mac-only { display: none; }
 }
 
 .faq-more { margin-top: 24px; text-align: center; font-weight: 700; color: var(--ink-soft); }
+
+/* Changelog */
+.section-changelog { padding-top: 0; }
+.releases { list-style: none; margin: 44px 0 0; padding: 0; display: grid; gap: 18px; }
+.release {
+  padding: 22px 26px 24px;
+  background: var(--paper);
+  border: 2px solid var(--line);
+  border-radius: 24px;
+}
+.release-next { background: var(--fern-tint); border: 2px dashed var(--fern); }
+.release-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; }
+.release h3 { font-family: var(--font-display); font-weight: 400; font-size: 1.6rem; color: var(--bark); }
+.release-next h3 { color: var(--pine-800); }
+.release-date { font-weight: 700; font-size: 1rem; color: var(--ink-soft); }
+.release ul { margin: 12px 0 0; padding: 0 0 0 1.2em; color: var(--ink-soft); }
+.release li + li { margin-top: 4px; }
+.release li::marker { color: var(--moss); }
 
 /* Tour modal */
 .modal {
