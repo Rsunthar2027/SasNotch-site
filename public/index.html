@@ -409,7 +409,10 @@
           <!-- Storage sizes, measured 2 Nov 2026 on 1.1.0. Each number sits on its own line below.
                Installed: du -sk /Applications/SasNotch.app (82660 KB = 84.6 MB on disk).
                Download and update: gh release view --repo Rsunthar2027/SasNotch --json tagName,assets
-               (SasNotch.dmg 22,336,464 bytes; SasNotch.zip, which updates use, 21,916,667 bytes). -->
+               (SasNotch.dmg 22,336,464 bytes; SasNotch.zip, which updates use, 21,916,667 bytes).
+               Local 1.2.0 build, 3 Nov 2026, not a published file: 83424 KB = 85.4 MB on disk, zip 22,148,039 bytes,
+               a dmg without the installer art 23,019,100 bytes. When 1.2.0 ships, re-measure the published files
+               and change the version named below. -->
           <details>
             <summary>How much storage does it take up?</summary>
             <p>SasNotch 1.1.0 takes about
@@ -448,8 +451,8 @@
         <h2 id="changelog-title">What's new</h2>
         <p class="section-lede">Newest first. The full notes for each release are on <a href="https://github.com/Rsunthar2027/SasNotch/releases">GitHub</a>.</p>
         <ol class="releases" role="list">
-          <!-- 1.2.0 PLACEHOLDER: planned items, not shipped yet. When 1.2.0 ships, edit the
-               bullets to what actually shipped, change the heading to "1.2.0", swap
+          <!-- 1.2.0 is built on feature/batch-1 but not released. These bullets match its CHANGELOG entry.
+               When it ships, change the heading to "1.2.0", swap
                "Not out yet" for <time class="release-date" datetime="YYYY-MM-DD">, and drop
                the release-next class. -->
           <li class="release release-next">
@@ -458,13 +461,13 @@
               <span class="release-date">Not out yet</span>
             </div>
             <ul>
-              <li>A simpler default setup: 12 core tiles in the island, 12 more tools one click away, and everything else under Advanced.</li>
-              <li>Timer presets.</li>
-              <li>A terminal tab in the island.</li>
-              <li>One-click selfies from Mirror.</li>
-              <li>Real Liquid Glass on macOS 26.</li>
-              <li>A notice for the battery charge limit.</li>
-              <li>Performance work for when SasNotch sits idle.</li>
+              <li>A simpler default setup: 12 core tiles in the island, 12 more tools one click away, and everything else under Advanced. If you're updating, you keep what you have and get asked once.</li>
+              <li>Timer presets: Focus, Break, Deep Work, and your own.</li>
+              <li>One-click selfies from Mirror, copied to your clipboard.</li>
+              <li>A terminal tab in the island, off by default, for one command at a time.</li>
+              <li>Apple's Liquid Glass on the open island, on macOS 26.</li>
+              <li>A charge limit notice that tells you when to unplug. SasNotch can't stop your Mac from charging.</li>
+              <li>Less background work while the island sits closed and you aren't using your Mac.</li>
               <li>The Watch feature is removed.</li>
             </ul>
           </li>
