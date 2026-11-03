@@ -506,6 +506,7 @@ html.is-other .mac-only { display: none; }
   font-size: clamp(1.15rem, 2.1vw, 1.35rem);
   color: var(--on-dark-soft);
 }
+.lede-tag { margin: -16px auto 30px; font-weight: 800; font-size: clamp(1.05rem, 1.8vw, 1.2rem); color: var(--fern-light); }
 .fine { margin-top: 16px; font-size: .98rem; font-weight: 700; letter-spacing: .02em; color: var(--on-dark-soft); }
 .fine a { color: inherit; }
 
@@ -582,6 +583,34 @@ html.is-other .mac-only { display: none; }
 
 @media (max-width: 1000px) {
   .cards { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* The default setup, under the feature cards */
+.setup { margin-top: 56px; }
+.setup-title {
+  text-align: center;
+  font-family: var(--font-display);
+  font-weight: 400;
+  font-size: clamp(1.5rem, 2.6vw, 2rem);
+  color: var(--bark);
+}
+.tiers { margin-top: 28px; display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; align-items: start; }
+.tier { padding: 24px 22px; border-radius: 24px 28px 22px 26px; background: var(--fern-tint); }
+.tier h4 { margin: 0 0 4px; font-size: 1.15rem; font-weight: 800; color: var(--pine-800); }
+.tier p { color: var(--ink-soft); font-size: 1.03rem; }
+.tier .chips + p { margin-top: 14px; }
+.chips { list-style: none; margin: 10px 0 0; padding: 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.chips li {
+  padding: .3em .8em;
+  border: 1.5px solid #CBD8AE;
+  border-radius: 999px;
+  background: var(--paper);
+  color: var(--ink);
+  font-size: .95rem;
+  font-weight: 700;
+}
+@media (max-width: 900px) {
+  .tiers { grid-template-columns: 1fr; max-width: 560px; margin-left: auto; margin-right: auto; }
 }
 @media (max-width: 600px) {
   .cards { grid-template-columns: 1fr; }
