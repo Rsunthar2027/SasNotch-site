@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>https://sasnotch.vercel.app/updates.xml</id>
+  <title>SasNotch updates</title>
+  <subtitle>What changed in each version of SasNotch.</subtitle>
+  <link rel="self" type="application/atom+xml" href="https://sasnotch.vercel.app/updates.xml"/>
+  <link rel="alternate" type="text/html" href="https://sasnotch.vercel.app/updates"/>
+  <author><name>SasNotch</name></author>
+  <updated>2026-10-26T23:27:58Z</updated>
+  <entry>
+    <id>https://sasnotch.vercel.app/updates#v1.1.0</id>
+    <title>SasNotch 1.1.0: List reminders in the island's Calendar page</title>
+    <link rel="alternate" type="text/html" href="https://sasnotch.vercel.app/updates#v1.1.0"/>
+    <published>2026-10-26T23:27:58Z</published>
+    <updated>2026-10-26T23:27:58Z</updated>
+    <content type="html">&lt;h3&gt;New&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;The island's Calendar page lists the reminders due today, and overdue ones, under your events. Tick one off to complete it in Reminders. Switch it off in Settings › Dynamic Island › Calendar.&lt;/li&gt;&lt;li&gt;Reminders joins the first-launch permissions screen.&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Improved&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;The installer window is a misty pine forest, with sasquatch footprints leading to the Applications folder.&lt;/li&gt;&lt;li&gt;The README has a download button for the DMG and step-by-step help for the &amp;quot;Apple could not verify&amp;quot; warning.&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+  <entry>
+    <id>https://sasnotch.vercel.app/updates#v1.0.0</id>
+    <title>SasNotch 1.0.0: First release</title>
+    <link rel="alternate" type="text/html" href="https://sasnotch.vercel.app/updates#v1.0.0"/>
+    <published>2026-10-26T20:09:58Z</published>
+    <updated>2026-10-26T20:09:58Z</updated>
+    <content type="html">&lt;h3&gt;New&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;First release of SasNotch: a Dynamic Island for the Mac notch with everyday utilities built in. Requires an Apple Silicon Mac with macOS 14 or later.&lt;/li&gt;&lt;li&gt;Island opens on hover after 100 ms and closes when the pointer leaves. A click pins it open; click the pin, click outside or press Esc to close it. Two-finger swipe down opens it, swipe up closes it.&lt;/li&gt;&lt;li&gt;Music controls with album art, a live visualizer, lyrics and the up-next queue.&lt;/li&gt;&lt;li&gt;Timers, stopwatch and Pomodoro; calendar events; notifications; download progress; AI agent usage.&lt;/li&gt;&lt;li&gt;Mirror tab with a live camera preview. The camera stops when the island closes or the tab changes.&lt;/li&gt;&lt;li&gt;Notices for volume, brightness, charging, Bluetooth devices, Focus changes and camera or microphone use.&lt;/li&gt;&lt;li&gt;Lock screen widgets: music, timers, calendar, battery while charging, and weather from Open-Meteo.&lt;/li&gt;&lt;li&gt;Keep Awake with 15 minutes to 8 hours or until turned off, from the island and the menu bar.&lt;/li&gt;&lt;li&gt;Per-app volume mixer with boost, system monitor, app switcher with live thumbnails, window snapping, Dock previews, clipboard history, text snippets, Finder cut and paste, file shelf, color picker and app uninstaller.&lt;/li&gt;&lt;li&gt;Island shape settings: width, height and corner radius at rest and open, plus Minimalistic and Standard modes. Liquid Glass on macOS 26; a blurred background on macOS 14 and 15.&lt;/li&gt;&lt;li&gt;One-screen setup that asks for each permission with its own button.&lt;/li&gt;&lt;li&gt;Menu bar menu with Settings, Pause Island, Keep Awake, Launch at Login, Check for Updates and Quit.&lt;/li&gt;&lt;li&gt;Automatic updates through Sparkle, signed with an EdDSA key.&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
+</feed>

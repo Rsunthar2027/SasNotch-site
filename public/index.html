@@ -27,6 +27,7 @@
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon-32.png" type="image/png" sizes="32x32">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="alternate" type="application/atom+xml" title="SasNotch updates" href="https://sasnotch.vercel.app/updates.xml">
   <link rel="preload" href="/fonts/caprasimo-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="preload" href="/fonts/nunito-latin.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="/css/site.css">
@@ -88,6 +89,7 @@
         <a href="#install">Install</a>
         <a href="#learn">Learn</a>
         <a href="#faq">FAQ</a>
+        <a class="nav-wide" href="/updates">What's new</a>
       </nav>
       <a class="btn btn-small mac-only" href="https://github.com/Rsunthar2027/SasNotch/releases/latest/download/SasNotch.dmg" data-download>
         <svg class="btn-icon" aria-hidden="true"><use href="#apple-dl"/></svg><span>Download<span class="hide-sm"> for Mac</span></span>
@@ -176,11 +178,12 @@
           <div class="hero-copy">
             <h1 id="hero-title">The notch, <span class="nowrap">but cozy.</span></h1>
             <p class="lede">SasNotch turns the black notch at the top of your MacBook screen into a little island. Point at it to see your day, your music and your timers.</p>
+            <p class="lede-tag">Simple by default. 70+ tools when you want them.</p>
             <div class="get" data-get>
               <a class="btn btn-big mac-only" href="https://github.com/Rsunthar2027/SasNotch/releases/latest/download/SasNotch.dmg" data-download>
                 <svg class="btn-icon" aria-hidden="true"><use href="#apple-dl"/></svg>Download for Mac
               </a>
-              <p class="fine mac-only">Free · macOS 14+ · Apple Silicon</p>
+              <p class="fine mac-only">Free · macOS 14+ · <span class="nowrap"><!-- size:download -->22 MB<!-- /size --></span><span class="fine-sep"> · </span><span class="fine-req">Apple Silicon</span></p>
               <div class="not-mac other-only" role="note">
                 <p class="not-mac-title">SasNotch is for Mac.</p>
                 <p>You're on <span data-device>another device</span> right now. Send yourself the link and open it on your Mac.</p>
@@ -236,6 +239,28 @@
           <li class="card"><svg class="card-icon" aria-hidden="true"><use href="#i-shelf"/></svg><h3>Shelf</h3><p>Drop files on the notch to park them for a bit. Drag them back out when you need them.</p></li>
           <li class="card"><svg class="card-icon" aria-hidden="true"><use href="#i-drop"/></svg><h3>Color picker</h3><p>Pick any color on your screen and copy its code.</p></li>
         </ul>
+        <!-- The default setup from 1.2.0 on. Names follow the batch brief; check them against the shipped app. -->
+        <div class="setup">
+          <h3 class="setup-title">What's on from the start</h3>
+          <div class="tiers">
+            <div class="tier">
+              <h4>In the island</h4>
+              <p>12 tiles, always on.</p>
+              <ul class="chips" role="list"><li>Controls</li><li>Volume mixer</li><li>Now Playing</li><li>Clipboard</li><li>Files</li><li>System</li><li>Calendar</li><li>Notifications</li><li>Timer</li><li>Mirror</li><li>Downloads</li><li>AI Agents</li></ul>
+            </div>
+            <div class="tier">
+              <h4>On the Features page</h4>
+              <p>12 more tools. These four start on:</p>
+              <ul class="chips" role="list"><li>Window switcher</li><li>Window layout and snapping</li><li>Keep Awake</li><li>Brightness</li></ul>
+              <p>These are one click away:</p>
+              <ul class="chips" role="list"><li>Screenshot</li><li>Screen OCR</li><li>Color picker</li><li>Text snippets</li><li>Finder cut and paste</li><li>Dock previews</li><li>Uninstaller</li><li>Mic mute</li></ul>
+            </div>
+            <div class="tier">
+              <h4>Under Advanced</h4>
+              <p>Everything else. It stays out of the way until you go looking.</p>
+            </div>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -382,6 +407,19 @@
       <div class="wrap wrap-narrow">
         <h2 id="faq-title">Questions</h2>
         <div class="faq">
+          <!-- Storage sizes in decimal MB, rounded to the nearest whole number. Measured 3 Nov 2026 on 1.1.0 (build 10100).
+               Download: gh release view --repo Rsunthar2027/SasNotch --json tagName,assets
+               (SasNotch.dmg 22,336,464 bytes = 22.3 MB; SasNotch.zip, which updates use, 21,916,667 bytes).
+               Installed: du -sk /Applications/SasNotch.app (82660 KB = 84,643,840 bytes = 84.6 MB on disk).
+               tools/release-sizes.mjs rewrites the numbers between the size markers, here and by both Download buttons.
+               The download size comes from the GitHub API. The installed size comes from data/sizes.json, so re-measure
+               it after each release.
+               Local 1.2.0 build, 3 Nov 2026, not a published file: 83424 KB = 85.4 MB on disk, zip 22,148,039 bytes,
+               a dmg without the installer art 23,019,100 bytes. -->
+          <details>
+            <summary>How much storage does it take up?</summary>
+            <p>SasNotch is about <span class="nowrap"><!-- size:download -->22 MB<!-- /size --></span> to download and about <span class="nowrap"><!-- size:installed -->85 MB<!-- /size --></span> installed. It only loads the features you turn on.</p>
+          </details>
           <details>
             <summary>Is it free?</summary>
             <p>Yes. There's no trial, no ads and no account. SasNotch is free and open source.</p>
@@ -407,6 +445,48 @@
       </div>
     </section>
 
+    <!-- latest-update:start (generated by tools/build-site.mjs from data/releases.json; don't edit by hand) -->
+    <section class="section section-latest" id="latest-update" aria-labelledby="latest-update-title">
+      <div class="wrap wrap-narrow">
+        <h2 id="latest-update-title">Latest update</h2>
+        <div class="release release-latest">
+          <div class="release-head">
+            <h3 class="release-version">1.1.0</h3>
+            <time class="release-date" datetime="2026-10-26">26 October 2026</time>
+          </div>
+          <p class="release-title">List reminders in the island's Calendar page</p>
+          <ul>
+            <li>The island's Calendar page lists the reminders due today, and overdue ones, under your events. Tick one off to complete it in Reminders. Switch it off in Settings › Dynamic Island › Calendar.</li>
+            <li>Reminders joins the first-launch permissions screen.</li>
+            <li>The installer window is a misty pine forest, with sasquatch footprints leading to the Applications folder.</li>
+          </ul>
+          <p class="release-more"><a href="/updates">See all updates</a></p>
+        </div>
+      </div>
+    </section>
+    <!-- latest-update:end -->
+
+    <section class="section section-feedback" id="feedback" aria-labelledby="feedback-title">
+      <div class="wrap wrap-narrow">
+        <h2 id="feedback-title">What people say</h2>
+        <!-- Empty state. Remove this block when the first real quote goes in below. -->
+        <div class="feedback-empty">
+          <p class="feedback-note">No feedback yet. If you've tried SasNotch, say what works and what doesn't.</p>
+          <a class="btn btn-big" href="https://github.com/Rsunthar2027/SasNotch/issues/new/choose">Share feedback</a>
+          <p class="feedback-fine">Opens GitHub, which needs a free account.</p>
+        </div>
+        <!-- Quote cards: real quotes only, each linked to where it was said. Uncomment the list,
+             copy one <li> per quote and replace the placeholders. Styles are in site.css under "Feedback".
+        <ul class="quotes" role="list">
+          <li class="quote">
+            <blockquote><p>Quote text here</p></blockquote>
+            <p class="quote-by"><a href="LINK-TO-THE-ORIGINAL-POST">Name or handle</a>, where it was said</p>
+          </li>
+        </ul>
+        -->
+      </div>
+    </section>
+
     <section class="cta" aria-labelledby="cta-title">
       <div class="cta-sky" aria-hidden="true"><div class="moon moon-small"></div></div>
       <div class="cta-inner">
@@ -415,7 +495,7 @@
           <a class="btn btn-big mac-only" href="https://github.com/Rsunthar2027/SasNotch/releases/latest/download/SasNotch.dmg" data-download>
             <svg class="btn-icon" aria-hidden="true"><use href="#apple-dl"/></svg>Download for Mac
           </a>
-          <p class="fine mac-only">Free · macOS 14+ · Apple Silicon</p>
+          <p class="fine mac-only">Free · macOS 14+ · <span class="nowrap"><!-- size:download -->22 MB<!-- /size --></span><span class="fine-sep"> · </span><span class="fine-req">Apple Silicon</span></p>
           <div class="not-mac other-only" role="note">
             <p class="not-mac-title">SasNotch is for Mac.</p>
             <p>Send yourself the link and open it on your Mac.</p>
@@ -441,6 +521,7 @@
         <li><a href="https://github.com/Rsunthar2027/SasNotch">Source code on GitHub</a></li>
         <li><a href="https://github.com/Rsunthar2027/SasNotch/blob/main/LICENSE">License: GPL-3.0</a></li>
         <li><a href="https://github.com/Rsunthar2027/SasNotch/issues/new/choose">Report a problem</a></li>
+        <li><a href="/updates">What's new</a></li>
       </ul>
       <p class="credits">Built on <a href="https://github.com/vorssaint/vorssaint-utils">Vorssaint</a> and <a href="https://github.com/Ebullioscopic/Atoll">Atoll</a> (which builds on <a href="https://github.com/TheBoredTeam/boring.notch">Boring.Notch</a>).</p>
       <p class="legal">SasNotch isn't affiliated with Apple. Mac and macOS are trademarks of Apple Inc.</p>
