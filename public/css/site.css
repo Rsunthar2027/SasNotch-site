@@ -509,6 +509,11 @@ html.is-other .mac-only { display: none; }
 .lede-tag { margin: -16px auto 30px; font-weight: 800; font-size: clamp(1.05rem, 1.8vw, 1.2rem); color: var(--fern-light); }
 .fine { margin-top: 16px; font-size: .98rem; font-weight: 700; letter-spacing: .02em; color: var(--on-dark-soft); }
 .fine a { color: inherit; }
+/* Two fixed lines on narrow screens, so the line count can't change when the web font swaps in. */
+@media (max-width: 420px) {
+  .fine-sep { display: none; }
+  .fine-req { display: block; }
+}
 
 .not-mac {
   max-width: 480px;

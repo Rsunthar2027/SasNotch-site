@@ -182,7 +182,7 @@
               <a class="btn btn-big mac-only" href="https://github.com/Rsunthar2027/SasNotch/releases/latest/download/SasNotch.dmg" data-download>
                 <svg class="btn-icon" aria-hidden="true"><use href="#apple-dl"/></svg>Download for Mac
               </a>
-              <p class="fine mac-only">Free · macOS 14+ · Apple Silicon</p>
+              <p class="fine mac-only">Free · macOS 14+ · <span class="nowrap"><!-- size:download -->22 MB<!-- /size --></span><span class="fine-sep"> · </span><span class="fine-req">Apple Silicon</span></p>
               <div class="not-mac other-only" role="note">
                 <p class="not-mac-title">SasNotch is for Mac.</p>
                 <p>You're on <span data-device>another device</span> right now. Send yourself the link and open it on your Mac.</p>
@@ -406,20 +406,18 @@
       <div class="wrap wrap-narrow">
         <h2 id="faq-title">Questions</h2>
         <div class="faq">
-          <!-- Storage sizes, measured 2 Nov 2026 on 1.1.0. Each number sits on its own line below.
-               Installed: du -sk /Applications/SasNotch.app (82660 KB = 84.6 MB on disk).
-               Download and update: gh release view --repo Rsunthar2027/SasNotch --json tagName,assets
-               (SasNotch.dmg 22,336,464 bytes; SasNotch.zip, which updates use, 21,916,667 bytes).
+          <!-- Storage sizes in decimal MB, rounded to the nearest whole number. Measured 3 Nov 2026 on 1.1.0 (build 10100).
+               Download: gh release view --repo Rsunthar2027/SasNotch --json tagName,assets
+               (SasNotch.dmg 22,336,464 bytes = 22.3 MB; SasNotch.zip, which updates use, 21,916,667 bytes).
+               Installed: du -sk /Applications/SasNotch.app (82660 KB = 84,643,840 bytes = 84.6 MB on disk).
+               tools/release-sizes.mjs rewrites the numbers between the size markers, here and by both Download buttons.
+               The download size comes from the GitHub API. The installed size comes from data/sizes.json, so re-measure
+               it after each release.
                Local 1.2.0 build, 3 Nov 2026, not a published file: 83424 KB = 85.4 MB on disk, zip 22,148,039 bytes,
-               a dmg without the installer art 23,019,100 bytes. When 1.2.0 ships, re-measure the published files
-               and change the version named below. -->
+               a dmg without the installer art 23,019,100 bytes. -->
           <details>
             <summary>How much storage does it take up?</summary>
-            <p>SasNotch 1.1.0 takes about
-              85&nbsp;MB
-              in your Applications folder. The download is about
-              22&nbsp;MB,
-              and you can delete SasNotch.dmg once the app is installed. Automatic updates download a zip of about the same size.</p>
+            <p>SasNotch is about <span class="nowrap"><!-- size:download -->22 MB<!-- /size --></span> to download and about <span class="nowrap"><!-- size:installed -->85 MB<!-- /size --></span> installed. It only loads the features you turn on.</p>
           </details>
           <details>
             <summary>Is it free?</summary>
@@ -534,7 +532,7 @@
           <a class="btn btn-big mac-only" href="https://github.com/Rsunthar2027/SasNotch/releases/latest/download/SasNotch.dmg" data-download>
             <svg class="btn-icon" aria-hidden="true"><use href="#apple-dl"/></svg>Download for Mac
           </a>
-          <p class="fine mac-only">Free · macOS 14+ · Apple Silicon</p>
+          <p class="fine mac-only">Free · macOS 14+ · <span class="nowrap"><!-- size:download -->22 MB<!-- /size --></span><span class="fine-sep"> · </span><span class="fine-req">Apple Silicon</span></p>
           <div class="not-mac other-only" role="note">
             <p class="not-mac-title">SasNotch is for Mac.</p>
             <p>Send yourself the link and open it on your Mac.</p>
