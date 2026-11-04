@@ -1,7 +1,7 @@
 [
   {
     "version": "1.2.0",
-    "date": null,
+    "date": "2026-11-04",
     "title": "Start with a simpler setup",
     "new": [
       "Timer presets. A Presets menu under the island timer's clock starts Focus (25 min), Break (5 min) or Deep Work (45 min), and you can add, rename, retime and delete your own: up to 12, from 1 to 180 minutes.",
@@ -20,7 +20,8 @@
       "The camera prompt now says a photo is taken only when you press the selfie button.",
       "Removed the Watch feature, its island section and its ⌥⌘O shortcut. Its saved settings are cleared on first launch."
     ],
-    "fixed": []
+    "fixed": [],
+    "published_at": "2026-11-04T05:39:59Z"
   },
   {
     "version": "1.1.0",

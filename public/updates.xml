@@ -6,7 +6,15 @@
   <link rel="self" type="application/atom+xml" href="https://sasnotch.vercel.app/updates.xml"/>
   <link rel="alternate" type="text/html" href="https://sasnotch.vercel.app/updates"/>
   <author><name>SasNotch</name></author>
-  <updated>2026-10-26T23:27:58Z</updated>
+  <updated>2026-11-04T05:39:59Z</updated>
+  <entry>
+    <id>https://sasnotch.vercel.app/updates#v1.2.0</id>
+    <title>SasNotch 1.2.0: Start with a simpler setup</title>
+    <link rel="alternate" type="text/html" href="https://sasnotch.vercel.app/updates#v1.2.0"/>
+    <published>2026-11-04T05:39:59Z</published>
+    <updated>2026-11-04T05:39:59Z</updated>
+    <content type="html">&lt;h3&gt;New&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;Timer presets. A Presets menu under the island timer's clock starts Focus (25 min), Break (5 min) or Deep Work (45 min), and you can add, rename, retime and delete your own: up to 12, from 1 to 180 minutes.&lt;/li&gt;&lt;li&gt;Selfies in Mirror. A camera button copies the frame on screen to the clipboard, flipped like the preview. A switch in Settings › Dynamic Island › Mirror also saves each one to Downloads.&lt;/li&gt;&lt;li&gt;A Terminal tab, off by default, under Advanced features (⌥⌘X). It runs one command at a time in your login shell and refuses sudo, su and doas. There's no PTY, so vim, top and anything that asks for input still need Terminal.&lt;/li&gt;&lt;li&gt;A charge limit notice next to the island's battery settings: off by default, 50–100%, 80% to start. At the limit the island shows a notice and a notification tells you to unplug. SasNotch can't stop your Mac from charging.&lt;/li&gt;&lt;li&gt;A layered app icon with dark and tinted versions for macOS 26.&lt;/li&gt;&lt;li&gt;A What's new link next to an available update in Settings, to its notes on the website.&lt;/li&gt;&lt;/ul&gt;&lt;h3&gt;Improved&lt;/h3&gt;&lt;ul&gt;&lt;li&gt;New installs start with a simpler setup: 12 core tiles that stay on, 12 more tools with a switch each, the first four on, and everything else in a collapsed Advanced section. Macs updating from an earlier version keep what they have installed and are asked once whether to switch. Reset to recommended setup is on the Features page.&lt;/li&gt;&lt;li&gt;On macOS 26 the open island, its tiles and its buttons use Apple's Liquid Glass, with black only over the camera housing. The default is clear glass with a light tint; Regular and Extra clear are in Settings. Reduce Transparency, Increase Contrast and Reduce Motion are each respected.&lt;/li&gt;&lt;li&gt;Better label legibility on Liquid Glass.&lt;/li&gt;&lt;li&gt;Macs on macOS 26 move to Liquid Glass once and are told. A Mac set up on an older macOS is asked once after it upgrades. Before macOS 26 nothing changes.&lt;/li&gt;&lt;li&gt;With no input, a closed island reads the window list once a second instead of four times. In a debug build, mean CPU went from 0.61% to 0.39%.&lt;/li&gt;&lt;li&gt;The camera prompt now says a photo is taken only when you press the selfie button.&lt;/li&gt;&lt;li&gt;Removed the Watch feature, its island section and its ⌥⌘O shortcut. Its saved settings are cleared on first launch.&lt;/li&gt;&lt;/ul&gt;</content>
+  </entry>
   <entry>
     <id>https://sasnotch.vercel.app/updates#v1.1.0</id>
     <title>SasNotch 1.1.0: List reminders in the island's Calendar page</title>
