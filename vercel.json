@@ -1,7 +1,7 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
   "framework": null,
-  "buildCommand": "",
+  "buildCommand": "node tools/build-site.mjs",
   "installCommand": "",
   "outputDirectory": "public",
   "cleanUrls": true,
@@ -48,6 +48,19 @@
     {
       "source": "/(css|js)/(.*)",
       "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, must-revalidate"
+        }
+      ]
+    },
+    {
+      "source": "/updates.xml",
+      "headers": [
+        {
+          "key": "Content-Type",
+          "value": "application/atom+xml; charset=utf-8"
+        },
         {
           "key": "Cache-Control",
           "value": "public, max-age=3600, must-revalidate"

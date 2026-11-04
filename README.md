@@ -2,7 +2,7 @@
 
 The one-page site for [SasNotch](https://github.com/Rsunthar2027/SasNotch), live at https://sasnotch.vercel.app.
 
-Plain HTML, CSS and JavaScript. No framework, no build step, no cookies. Visits are counted with [Vercel Web Analytics](https://vercel.com/docs/analytics), which is cookie-free and doesn't store personal data. The numbers are in the Vercel dashboard under the project's Analytics tab.
+Plain HTML, CSS and JavaScript. No framework, no dependencies, no cookies. One small script generates the update notes. Visits are counted with [Vercel Web Analytics](https://vercel.com/docs/analytics), which is cookie-free and doesn't store personal data. The numbers are in the Vercel dashboard under the project's Analytics tab.
 
 ## Editing
 
@@ -10,12 +10,13 @@ Everything the site serves is in `public/`:
 
 | File | What it holds |
 |---|---|
-| `index.html` | All the page text and the inline SVG art |
+| `index.html` | The page text and the inline SVG art |
 | `css/site.css` | Colours (the tokens at the top), type and layout |
 | `js/main.js` | Mac detection, Copy link, menu, video chapters and tour modal, the island demo, parallax |
 | `img/` | Pine ridges, paper grain, the three help illustrations |
 | `videos/` | The tour, install and getting-around videos with their posters |
 | `fonts/` | Caprasimo and Nunito, self-hosted |
+| `updates/index.html`, `updates.xml` | The update notes page and Atom feed. Both are generated; see below |
 
 To preview, run this from the repo folder and open http://localhost:4173:
 
@@ -38,7 +39,13 @@ The last number of `encode` is the target size in MB. Chapter buttons are plain 
 
 The share image (`og.png`) and the PNG icons come from `tools/og.html` and `tools/icons.html`. After changing either, run `./tools/make-images.sh` (it needs Google Chrome).
 
-The site's address appears in `index.html` (canonical and social tags), `robots.txt`, `sitemap.xml` and `js/main.js`. Update all four if the domain changes.
+The site's address appears in `index.html` (canonical and social tags), `robots.txt`, `sitemap.xml`, `js/main.js` and `tools/build-site.mjs`. Update all five if the domain changes.
+
+## Update notes
+
+Edit `data/releases.json`, newest first, then run `node tools/build-site.mjs` and commit the result. It writes `public/updates/index.html`, `public/updates.xml` and the "Latest update" card between the markers in `public/index.html`, and it copies the header and footer on `/updates` from `index.html`. Vercel runs the same command on every deploy.
+
+The script also reads the published GitHub releases. A release missing from the JSON gets added from its `### Added/Changed/Fixed/Removed` notes, and an entry with `"date": null` takes its date from GitHub once it's out. These additions aren't saved to the JSON, so add new versions there too: if GitHub can't be reached, the script builds from the JSON alone and still exits 0.
 
 ## Deploying
 

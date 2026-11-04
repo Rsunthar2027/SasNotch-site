@@ -213,6 +213,8 @@ html.is-other .mac-only { display: none; }
   .nav-links a:last-child { border-bottom: 0; }
   .nav.is-open .nav-links { display: flex; }
 }
+.nav-links .nav-wide { white-space: nowrap; }
+.nav-links a[aria-current="page"] { color: var(--ink); }
 /* A sixth link only fits from 1100px (fallback fonts are wider); below 961px it is in the menu. */
 @media (min-width: 961px) and (max-width: 1099px) {
   .nav-links .nav-wide { display: none; }
@@ -968,8 +970,9 @@ html.is-other .mac-only { display: none; }
 
 .faq-more { margin-top: 24px; text-align: center; font-weight: 700; color: var(--ink-soft); }
 
-/* Changelog */
-.section-changelog { padding-top: 0; }
+/* Update notes: the home page's "Latest update" card and the /updates page */
+.section-latest { padding-top: 0; }
+.section-updates h1 { font-size: clamp(2.1rem, 4.4vw, 3.2rem); color: var(--bark); text-align: center; }
 .releases { list-style: none; margin: 44px 0 0; padding: 0; display: grid; gap: 18px; }
 .release {
   padding: 22px 26px 24px;
@@ -977,14 +980,26 @@ html.is-other .mac-only { display: none; }
   border: 2px solid var(--line);
   border-radius: 24px;
 }
+.release:target { border-color: var(--moss); }
+.release-latest { margin-top: 36px; }
 .release-next { background: var(--fern-tint); border: 2px dashed var(--fern); }
 .release-head { display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 14px; }
-.release h3 { font-family: var(--font-display); font-weight: 400; font-size: 1.6rem; color: var(--bark); }
-.release-next h3 { color: var(--pine-800); }
+.release-version { font-family: var(--font-display); font-weight: 400; font-size: 1.6rem; color: var(--bark); text-align: left; }
+.release-next .release-version { color: var(--pine-800); }
 .release-date { font-weight: 700; font-size: 1rem; color: var(--ink-soft); }
+.release-link { margin-left: auto; padding: 4px 2px; font-weight: 700; font-size: .95rem; }
+.release-title { margin-top: 6px; font-weight: 800; }
+.release-group { margin-top: 18px; font-size: 1.05rem; color: var(--bark); }
 .release ul { margin: 12px 0 0; padding: 0 0 0 1.2em; color: var(--ink-soft); }
+.release-group + ul { margin-top: 6px; }
 .release li + li { margin-top: 4px; }
 .release li::marker { color: var(--moss); }
+.release-get { margin-top: 20px; }
+.release-more { margin-top: 16px; font-weight: 800; }
+@media (max-width: 420px) {
+  .release { padding: 18px 18px 20px; }
+}
+.page-updates .footer { padding-top: 40px; }
 
 /* Feedback: an empty state now, quote cards later (pattern commented out in index.html) */
 .section-feedback { padding-top: 0; }
